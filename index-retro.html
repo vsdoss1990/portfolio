@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDHYASAGAR C. DOSS - TERMINAL v4.5</title>
+    <link rel="stylesheet" href="styles-retro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Boot Loader Screen -->
+    <div id="boot-loader" class="boot-loader">
+        <div class="boot-content">
+            <div class="boot-header">
+                <pre class="boot-logo">
+██████╗  ██████╗ ██████╗  ██████╗ ██████╗
+██╔══██╗██╔═══██╗██╔══██╗██╔════╝██╔═══██╗
+██████╔╝██║   ██║██████╔╝██║     ██║   ██║
+██╔══██╗██║   ██║██╔══██╗██║     ██║   ██║
+██║  ██║╚██████╔╝██████╔╝╚██████╗╚██████╔╝
+╚═╝  ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚═════╝
+                </pre>
+                <div class="boot-title">ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM</div>
+                <div class="boot-version">VERSION 4.5.0.2 | COPYRIGHT 2025-2077 ROBCOINDUSTRIES</div>
+            </div>
+
+            <div class="boot-console" id="boot-console"></div>
+
+            <div class="boot-progress-container">
+                <div class="progress-label">SYSTEM INITIALIZATION: <span id="progress-percent">0%</span></div>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner" id="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="boot-status" id="boot-status">LOADING...</div>
+        </div>
+    </div>
+
+    <!-- CRT Screen Overlay -->
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+    <div class="crt-scan-line"></div>
+
+    <!-- Terminal Container -->
+    <div class="terminal-container" id="main-terminal" style="display: none;">
+
+        <!-- Terminal Header -->
+        <header class="terminal-header">
+            <div class="terminal-title">
+                <span class="terminal-prompt">></span> ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM<span class="header-cursor">█</span>
+            </div>
+            <div class="terminal-status">
+                <button id="mute-toggle" class="control-btn" title="Mute Audio">
+                    <i class="fas fa-volume-up" id="mute-icon"></i>
+                    <span class="btn-text" id="mute-text">AUDIO: ON</span>
+                </button>
+                <button id="fullscreen-toggle" class="control-btn fullscreen-control" title="Toggle Fullscreen">
+                    <i class="fas fa-expand" id="fullscreen-icon"></i>
+                    <span class="btn-text" id="fullscreen-text" style="display: none;"></span>
+                </button>
+                <span class="status-item">CONNECTED</span>
+                <span class="status-item" id="current-time">00:00:00</span>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav class="terminal-nav">
+            <div class="nav-prompt">[SELECT MODULE]</div>
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link active">[HOME]</a></li>
+                <li><a href="#about" class="nav-link">[ABOUT]</a></li>
+                <li><a href="#skills" class="nav-link">[SKILLS]</a></li>
+                <li><a href="#experience" class="nav-link">[EXPERIENCE]</a></li>
+                <li><a href="#projects" class="nav-link">[PROJECTS]</a></li>
+                <li><a href="#contact" class="nav-link">[CONTACT]</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Terminal Screen -->
+        <main class="terminal-screen">
+
+            <!-- Home Section -->
+            <section id="home" class="terminal-section active">
+                <div class="boot-sequence">
+                    <p class="boot-line">> INITIALIZING SYSTEM...</p>
+                    <p class="boot-line">> LOADING USER DATA...</p>
+                    <p class="boot-line">> WELCOME TO TERMINAL</p>
+                </div>
+
+                <div class="hero-content">
+                    <pre class="ascii-art">
+                                ░██                                  
+                                ░██                                  
+░██    ░██  ░███████      ░████████  ░███████   ░███████   ░███████  
+░██    ░██ ░██    ░██    ░██    ░██ ░██    ░██ ░██        ░██        
+ ░██  ░██  ░██           ░██    ░██ ░██    ░██  ░███████   ░███████  
+  ░██░██   ░██    ░██    ░██   ░███ ░██    ░██        ░██        ░██ 
+   ░███     ░███████      ░█████░██  ░███████   ░███████   ░███████  
+                    </pre>
+
+                    <div class="terminal-intro">
+                        <h1 class="glitch" data-text="VIDHYASAGAR CHITHARANJAN DOSS">VIDHYASAGAR CHITHARANJAN DOSS</h1>
+                        <p class="subtitle">
+                            <span class="typing-text">> PROTOTYPER | MAKER | PROBLEM SOLVER</span>
+                            <span class="cursor-blink">█</span>
+                        </p>
+                        <p class="description">
+                            :: I TURN IDEAS INTO REALITY THROUGH CODE, MACHINING, AND ELECTRONICS ::<br>
+                            :: FROM CONCEPT TO WORKING PROTOTYPE ::
+                        </p>
+
+                        <div class="action-buttons">
+                            <a href="#contact" class="terminal-button">[INITIATE CONTACT]</a>
+                            <a href="#projects" class="terminal-button">[VIEW PROJECTS]</a>
+                        </div>
+
+                        <div class="connection-links">
+                            <a href="mailto:vsdoss1990@gmail.com" class="connection-link">
+                                <i class="fas fa-envelope"></i> EMAIL.LINK
+                            </a>
+                            <a href="https://github.com/vsdoss1990" target="_blank" class="connection-link">
+                                <i class="fab fa-github"></i> GITHUB.LINK
+                            </a>
+                            <a href="https://linkedin.com/in/vidhyasagar-doss" target="_blank" class="connection-link">
+                                <i class="fab fa-linkedin"></i> LINKEDIN.LINK
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="terminal-section">
+                <div class="section-header">
+                    <h2>[ ABOUT.MODULE ]</h2>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="data-grid">
+                    <div class="data-column">
+                        <h3>>> PROFILE.SUMMARY</h3>
+                        <p class="terminal-text">
+                            I DON'T JUST DESIGN SOLUTIONS—I BUILD THEM. WHETHER IT'S PROGRAMMING
+                            AUTOMATION TOOLS, MACHINING PRECISION PARTS ON A CNC, OR WIRING UP
+                            ARDUINO PROJECTS, I LOVE THE ENTIRE JOURNEY FROM CONCEPT TO WORKING PROTOTYPE.
+                        </p>
+                        <p class="terminal-text">
+                            MY PLAYGROUND SPANS BOTH DIGITAL AND PHYSICAL: I'VE CODED ENTERPRISE
+                            SYSTEMS AT INFOSYS, OPERATED WIRE EDM AND CNC MACHINES, BUILT MECHANICAL
+                            DISPLAYS FROM SCRATCH, AND TAUGHT STUDENTS HOW TO BRING THEIR OWN IDEAS TO LIFE.
+                        </p>
+                        <p class="terminal-text">
+                            WHAT DRIVES ME? THE SATISFACTION OF SEEING SOMETHING WORK FOR THE FIRST
+                            TIME—WHETHER IT'S A CLEAN G-CODE PROGRAM RUNNING ON A HAAS MILL, A PYTHON
+                            SCRIPT SAVING HOURS OF MANUAL WORK, OR A HOMEMADE WIND TUNNEL DEMONSTRATING
+                            FLUID DYNAMICS.
+                        </p>
+                    </div>
+
+                    <div class="data-column">
+                        <h3>>> SYSTEM.STATISTICS</h3>
+                        <div class="stat-display">
+                            <div class="stat-item">
+                                <div class="stat-label">PROJECTS_BUILT:</div>
+                                <div class="stat-value">50+</div>
+                                <div class="stat-bar" style="--stat-width: 85%"></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">PROBLEMS_SOLVED:</div>
+                                <div class="stat-value">INFINITE</div>
+                                <div class="stat-bar" style="--stat-width: 100%"></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">TOOLS_MASTERED:</div>
+                                <div class="stat-value">15+</div>
+                                <div class="stat-bar" style="--stat-width: 75%"></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">YEARS_MAKING:</div>
+                                <div class="stat-value">10+</div>
+                                <div class="stat-bar" style="--stat-width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="profile-image-box">
+                            <div class="image-frame">
+                                <img src="headshot1.jpg" alt="Vidhyasagar C. Doss" class="retro-image">
+                                <div class="image-caption">[PROFILE.IMG]</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="terminal-section">
+                <div class="section-header">
+                    <h2>[ SKILLS.DATABASE ]</h2>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="skills-container">
+                    <!-- Rapid Prototyping -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <i class="fas fa-hammer"></i>
+                            <h3>RAPID_PROTOTYPING.SYS</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>> CAD DESIGN: FUSION 360, SOLIDWORKS, AUTOCAD</li>
+                            <li>> 3D PRINTING: FDM FOR QUICK ITERATIONS</li>
+                            <li>> CNC MACHINING: HAAS, OKUMA, TAKUMI</li>
+                            <li>> CAM PROGRAMMING: MASTERCAM, G-CODE</li>
+                            <li>> WORKFLOW: DESIGN → BUILD → TEST → IMPROVE</li>
+                        </ul>
+                    </div>
+
+                    <!-- Electronics -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <i class="fas fa-microchip"></i>
+                            <h3>ELECTRONICS.SYS</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>> MICROCONTROLLERS: ARDUINO, RASPBERRY PI</li>
+                            <li>> PROGRAMMING: C/C++, PYTHON</li>
+                            <li>> MOTOR CONTROL: STEPPERS, SERVOS, ESCS</li>
+                            <li>> SENSORS: READING & INTEGRATING I/O</li>
+                            <li>> CIRCUITS: BREADBOARDING, SOLDERING, DEBUG</li>
+                        </ul>
+                    </div>
+
+                    <!-- Software -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <i class="fas fa-code"></i>
+                            <h3>SOFTWARE.SYS</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>> LANGUAGES: PYTHON, JAVA, JAVASCRIPT, C/C++</li>
+                            <li>> AUTOMATION: WORKFLOW SCRIPTING</li>
+                            <li>> WEB TOOLS: APIS, WEBHOOKS, N8N</li>
+                            <li>> DEVOPS: DOCKER, GIT, HOMELAB</li>
+                            <li>> PRINCIPLE: IF IT'S TEDIOUS, AUTOMATE IT</li>
+                        </ul>
+                    </div>
+
+                    <!-- Fabrication -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>FABRICATION.SYS</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>> PRECISION: TOLERANCES ±0.001"</li>
+                            <li>> WIRE EDM: SODICK MACHINES</li>
+                            <li>> MANUAL MACHINES: MILL, LATHE, GRINDER</li>
+                            <li>> MATERIALS: METAL, PLASTIC, WOOD</li>
+                            <li>> ASSEMBLY: MECHANICAL INTEGRATION</li>
+                        </ul>
+                    </div>
+
+                    <!-- Problem Solving -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>PROBLEM_SOLVING.SYS</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>> DEBUG: CODE BUGS TO MECHANICAL BINDING</li>
+                            <li>> RESOURCEFUL: ADAPT AVAILABLE SOLUTIONS</li>
+                            <li>> FAST LEARNER: QUICK TOOL ACQUISITION</li>
+                            <li>> DOCUMENTATION: PHOTOS, WRITE-UPS, REPOS</li>
+                            <li>> TEACHING: HANDS-ON KNOWLEDGE TRANSFER</li>
+                        </ul>
+                    </div>
+
+                    <!-- Integration -->
+                    <div class="skill-module">
+                        <div class="module-header">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3>INTEGRATION.SYS</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li>> FULL STACK: HARDWARE + FIRMWARE + SOFTWARE</li>
+                            <li>> INTERFACES: CROSS-SYSTEM COMMUNICATION</li>
+                            <li>> DEBUGGING: ROOT CAUSE ACROSS LAYERS</li>
+                            <li>> TESTING: VALIDATE BEFORE FINALIZE</li>
+                            <li>> REAL WORLD: THINGS THAT ACTUALLY WORK</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="terminal-section">
+                <div class="section-header">
+                    <h2>[ EXPERIENCE.LOG ]</h2>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="timeline-terminal">
+                    <!-- Current Role -->
+                    <div class="timeline-entry">
+                        <div class="timeline-date">[JAN.2025 - PRESENT]</div>
+                        <h3 class="timeline-title">PRECISION MACHINIST & PROTOTYPER</h3>
+                        <div class="timeline-company">WOLFEDALE TOOL & STAMPING | MISSISSAUGA, ON</div>
+                        <p class="timeline-challenge">>> CHALLENGE: PRODUCE PRECISION TOOLING PARTS WITH 0.001" TOLERANCES</p>
+                        <ul class="timeline-achievements">
+                            <li>> MASTERED TAKUMI, OKUMA, SODICK WIRE EDM IN PRODUCTION</li>
+                            <li>> OPTIMIZED G-CODE PROGRAMS TO REDUCE CYCLE TIME</li>
+                            <li>> DEBUGGED COMPLEX PART SETUPS AND FIXTURING</li>
+                            <li>> SELECTED OPTIMAL CUTTING TOOLS FOR MATERIALS</li>
+                            <li>> DELIVERED CONSISTENT QUALITY UNDER DEADLINES</li>
+                        </ul>
+                    </div>
+
+                    <!-- Infosys Tech Lead -->
+                    <div class="timeline-entry">
+                        <div class="timeline-date">[NOV.2021 - JAN.2024]</div>
+                        <h3 class="timeline-title">AUTOMATION BUILDER & TECH LEAD</h3>
+                        <div class="timeline-company">INFOSYS LTD | MISSISSAUGA, CANADA</div>
+                        <p class="timeline-challenge">>> CHALLENGE: SLOW, ERROR-PRONE HEALTHCARE PORTAL RELEASES</p>
+                        <ul class="timeline-achievements">
+                            <li>> BUILT PYTHON + SELENIUM AUTOMATION TOOLS</li>
+                            <li>> SAVED 30+ PERSON-HOURS PER RELEASE CYCLE</li>
+                            <li>> REDUCED POST-DEPLOYMENT ISSUES BY 25%</li>
+                            <li>> LED OFFSHORE TEAMS, MANAGED RELEASES</li>
+                            <li>> DEBUGGED SSO/SAML AUTHENTICATION SYSTEMS</li>
+                        </ul>
+                    </div>
+
+                    <!-- Infosys Senior -->
+                    <div class="timeline-entry">
+                        <div class="timeline-date">[AUG.2015 - OCT.2021]</div>
+                        <h3 class="timeline-title">FULL-STACK PROBLEM SOLVER</h3>
+                        <div class="timeline-company">INFOSYS LTD | MYSORE, INDIA</div>
+                        <p class="timeline-challenge">>> CHALLENGE: LEGACY PORTALS SLOW AND BREAKING UNDER LOAD</p>
+                        <ul class="timeline-achievements">
+                            <li>> REFACTORED SPRING: 30% PERFORMANCE IMPROVEMENT</li>
+                            <li>> AUTOMATED FILE SYNC AND NOTIFICATION ALERTS</li>
+                            <li>> CREATED NIGHTLY RECONCILIATION SCRIPTS</li>
+                            <li>> MIGRATED JSP TO RESPONSIVE HTML5</li>
+                            <li>> REDUCED TECHNICAL DEBT SIGNIFICANTLY</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sheridan -->
+                    <div class="timeline-entry">
+                        <div class="timeline-date">[JAN.2024 - AUG.2024]</div>
+                        <h3 class="timeline-title">CNC PROGRAMMING & PROTOTYPING</h3>
+                        <div class="timeline-company">SHERIDAN COLLEGE | BRAMPTON, ON</div>
+                        <p class="timeline-challenge">>> CHALLENGE: CAREER PIVOT INTO MANUFACTURING FROM ZERO</p>
+                        <ul class="timeline-achievements">
+                            <li>> MASTERED HAAS VF1 OPERATION, G-CODE</li>
+                            <li>> DESIGNED PARTS IN AUTOCAD, MASTERCAM</li>
+                            <li>> MACHINED COMPONENTS TO SPECIFICATION</li>
+                            <li>> VOLUNTEERED AT BIKE HUB TEACHING REPAIR</li>
+                            <li>> CERTIFICATION → IMMEDIATE HIRE AS MACHINIST</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="terminal-section">
+                <div class="section-header">
+                    <h2>[ PROJECTS.ARCHIVE ]</h2>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Split-Flap Display -->
+                    <div class="project-terminal">
+                        <div class="project-header">
+                            <i class="fas fa-th-large"></i>
+                            <h3>SPLIT-FLAP DISPLAY</h3>
+                        </div>
+                        <p class="project-desc">
+                            <strong>>> PROBLEM:</strong> WANTED RETRO AIRPORT-STYLE DISPLAY THAT ACTUALLY WORKS<br>
+                            <strong>>> SOLUTION:</strong> 3D-PRINTED MECHANICS + ARDUINO + STEPPER MOTORS +
+                            C++ CODE FOR FLAP SEQUENCING. ITERATED UNTIL TIMING WAS SMOOTH AND RELIABLE.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">ARDUINO</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">MOTORS</span>
+                            <span class="tag">3D-PRINT</span>
+                            <span class="tag">CAD</span>
+                        </div>
+                        <a href="https://vsdoss1990.github.io/splitflapdisplay" target="_blank" class="project-link">
+                            [ACCESS PROJECT] >>
+                        </a>
+                    </div>
+
+                    <!-- Wind Tunnel -->
+                    <div class="project-terminal">
+                        <div class="project-header">
+                            <i class="fas fa-wind"></i>
+                            <h3>DIY WIND TUNNEL</h3>
+                        </div>
+                        <p class="project-desc">
+                            <strong>>> PROBLEM:</strong> TEACHING FLUID DYNAMICS WITHOUT SEEING AIRFLOW<br>
+                            <strong>>> SOLUTION:</strong> BUILT WORKING WIND TUNNEL FROM SCRATCH—DESIGNED
+                            DUCT, SOURCED FANS, ADDED SMOKE VISUALIZATION. NOW STUDENTS SEE LAMINAR VS
+                            TURBULENT FLOW IN ACTION.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">PHYSICS</span>
+                            <span class="tag">FABRICATION</span>
+                            <span class="tag">DESIGN</span>
+                            <span class="tag">EDUCATION</span>
+                        </div>
+                        <a href="https://tinyurl.com/my-wind-tunnel" target="_blank" class="project-link">
+                            [ACCESS PROJECT] >>
+                        </a>
+                    </div>
+
+                    <!-- Homelab -->
+                    <div class="project-terminal">
+                        <div class="project-header">
+                            <i class="fas fa-server"></i>
+                            <h3>HOMELAB AUTOMATION</h3>
+                        </div>
+                        <p class="project-desc">
+                            <strong>>> PROBLEM:</strong> TIRED OF REPETITIVE TASKS, WANTED PRIVATE CLOUD<br>
+                            <strong>>> SOLUTION:</strong> BUILT HOMELAB SERVER WITH DOCKER CONTAINERS—
+                            AUTOMATED FILE BACKUPS, N8N WORKFLOWS, TAILSCALE REMOTE ACCESS.
+                            IF I DO IT TWICE, I AUTOMATE IT.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">DOCKER</span>
+                            <span class="tag">N8N</span>
+                            <span class="tag">LINUX</span>
+                            <span class="tag">APIS</span>
+                            <span class="tag">DEVOPS</span>
+                        </div>
+                    </div>
+
+                    <!-- PDF Automation -->
+                    <div class="project-terminal">
+                        <div class="project-header">
+                            <i class="fas fa-robot"></i>
+                            <h3>PDF CLEANUP BOT</h3>
+                        </div>
+                        <p class="project-desc">
+                            <strong>>> PROBLEM:</strong> MANUAL PDF CLEANUP EATING 30+ HOURS PER RELEASE<br>
+                            <strong>>> SOLUTION:</strong> BUILT SELENIUM BOT IN PYTHON—CRAWLS WEB PAGES,
+                            FINDS EMBEDDED PDFS, VALIDATES THEM, CLEANS BROKEN LINKS AUTOMATICALLY.
+                            ONE SCRIPT = HOURS SAVED WEEKLY.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">PYTHON</span>
+                            <span class="tag">SELENIUM</span>
+                            <span class="tag">AUTOMATION</span>
+                            <span class="tag">SCRAPING</span>
+                        </div>
+                    </div>
+
+                    <!-- IoT Projects -->
+                    <div class="project-terminal">
+                        <div class="project-header">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>IOT EXPERIMENTS</h3>
+                        </div>
+                        <p class="project-desc">
+                            <strong>>> PROBLEM:</strong> CURIOSITY + SPARE ARDUINOS = ENDLESS TINKERING<br>
+                            <strong>>> SOLUTION:</strong> BUILT SENSOR PROJECTS, MOTOR CONTROL SYSTEMS,
+                            HOME AUTOMATION PROTOTYPES. SOME WORK PERFECTLY, SOME TEACH WHY THINGS FAIL.
+                            EVERY PROJECT ADDS TO THE TOOLKIT.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">ARDUINO</span>
+                            <span class="tag">SENSORS</span>
+                            <span class="tag">IOT</span>
+                            <span class="tag">MAKING</span>
+                        </div>
+                    </div>
+
+                    <!-- Turbocharger -->
+                    <div class="project-terminal">
+                        <div class="project-header">
+                            <i class="fas fa-fan"></i>
+                            <h3>HYBRID TURBOCHARGER</h3>
+                        </div>
+                        <p class="project-desc">
+                            <strong>>> PROBLEM:</strong> COLLEGE PROJECT—IMPROVE ENGINE EFFICIENCY<br>
+                            <strong>>> SOLUTION:</strong> LED TEAM TO DESIGN AND FABRICATE HYBRID TURBO
+                            SYSTEM. LEARNED EXHAUST DYNAMICS, BEARING SELECTION, THERMAL MANAGEMENT
+                            THROUGH HANDS-ON TRIAL AND ERROR.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">MECHANICAL</span>
+                            <span class="tag">THERMO</span>
+                            <span class="tag">TEAMWORK</span>
+                            <span class="tag">PROTOTYPE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="terminal-section">
+                <div class="section-header">
+                    <h2>[ CONTACT.PROTOCOL ]</h2>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>>> CONNECTION.INFO</h3>
+
+                        <div class="info-block">
+                            <div class="info-label">LOCATION:</div>
+                            <div class="info-value">MISSISSAUGA, ON L5C 4M5, CANADA</div>
+                        </div>
+
+                        <div class="info-block">
+                            <div class="info-label">EMAIL:</div>
+                            <div class="info-value">
+                                <a href="mailto:vsdoss1990@gmail.com">VSDOSS1990@GMAIL.COM</a>
+                            </div>
+                        </div>
+
+                        <div class="info-block">
+                            <div class="info-label">PHONE:</div>
+                            <div class="info-value">
+                                <a href="tel:+16476132652">+1 (647) 613-2652</a>
+                            </div>
+                        </div>
+
+                        <div class="info-block">
+                            <div class="info-label">STATUS:</div>
+                            <div class="info-value">PERMANENT RESIDENT | AVAILABLE</div>
+                        </div>
+
+                        <div class="connection-buttons">
+                            <a href="mailto:vsdoss1990@gmail.com" class="terminal-button">
+                                <i class="fas fa-envelope"></i> SEND_EMAIL
+                            </a>
+                            <a href="https://github.com/vsdoss1990" target="_blank" class="terminal-button">
+                                <i class="fab fa-github"></i> VIEW_GITHUB
+                            </a>
+                            <a href="https://linkedin.com/in/vidhyasagar-doss" target="_blank" class="terminal-button">
+                                <i class="fab fa-linkedin"></i> CONNECT_LINKEDIN
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h3>>> MESSAGE.TRANSMISSION</h3>
+                        <form class="terminal-form" id="contactForm">
+                            <div class="form-field">
+                                <label>NAME:</label>
+                                <input type="text" name="name" required placeholder="ENTER NAME...">
+                            </div>
+
+                            <div class="form-field">
+                                <label>EMAIL:</label>
+                                <input type="email" name="email" required placeholder="ENTER EMAIL...">
+                            </div>
+
+                            <div class="form-field">
+                                <label>SUBJECT:</label>
+                                <input type="text" name="subject" required placeholder="ENTER SUBJECT...">
+                            </div>
+
+                            <div class="form-field">
+                                <label>MESSAGE:</label>
+                                <textarea name="message" rows="5" required placeholder="ENTER MESSAGE..."></textarea>
+                            </div>
+
+                            <button type="submit" class="terminal-button submit-btn">
+                                [TRANSMIT MESSAGE] >>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Terminal Footer -->
+        <footer class="terminal-footer">
+            <div class="footer-content">
+                <p>>> © 2025 VIDHYASAGAR CHITHARANJAN DOSS. ALL RIGHTS RESERVED.</p>
+                <p>>> BRIDGING SOFTWARE, MANUFACTURING & EDUCATION</p>
+                <p>>> TERMINAL VERSION 4.5 | SYSTEM STABLE</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script-retro.js"></script>
+</body>
+</html>
